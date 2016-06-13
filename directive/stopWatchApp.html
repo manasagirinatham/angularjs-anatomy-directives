@@ -1,0 +1,12 @@
+<html ng-app="stopWatchApp">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="stopWatchApp.js"></script>
+    <body ng-controller="SimpleController">
+        <div stop-watch options="stopWatchOptions">
+            <h2>{{stopWatchOptions.elapsedTime | date:'MM/dd/yyyy @ h:mma # s:sss'}}</h2>
+            <button ng-click="startTimer()">Start</button>
+            <button ng-click="stopTimer()">Stop</button>
+            <button ng-click="resetTimer()">Reset</button>
+        </div>
+    </body>
+</html>

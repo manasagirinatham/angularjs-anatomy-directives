@@ -1,0 +1,23 @@
+{
+  "name": "angularjs-anatomy-directives",
+  "private": false,
+  "version": "1.0.0",
+  "description": "AngularJS Anatomy & Directives",
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "*"
+  },
+  "scripts": {
+    "start": "node node_modules/http-server/bin/http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:agrawalakhil/angularjs-anatomy-directives.git"
+  },
+  "author": "Akhil Agrawal",
+  "license": "Apache Licence Version 2.0",
+  "bugs": {
+    "url": "http://digikrit.com"
+  },
+  "homepage": "http://digikrit.com"
+}

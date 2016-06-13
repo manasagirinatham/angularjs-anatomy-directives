@@ -1,0 +1,16 @@
+<html ng-app="myApp">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script>
+            var myApp = angular.module("myApp", []);
+            myApp.controller('SimpleController', function($scope) {
+                $scope.modelName = "Model Name";
+            });
+        </script>
+    </head>
+    <body ng-controller="SimpleController">
+        <div ng-model="modelName">
+             {{modelName}}
+        </div>
+    </body>
+</html>

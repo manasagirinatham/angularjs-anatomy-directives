@@ -1,0 +1,31 @@
+<html ng-app="myApp">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <body>
+        <div class="container" ng-controller="SimpleController">
+            <h3>Loading Customer List</h3>
+            <ul>
+                <li ng-repeat="cust in customers">
+                    {{ cust.name }} - {{ cust.city }}
+                </li>
+            </ul>
+        </div>
+        <script>
+            var myApp = angular.module("myApp", []);
+            myApp.controller('SimpleController', function($scope, $q, $http, $timeout) {
+                var deferred = $q.defer();
+                $timeout(function() {
+                    $http.get('customers.json').success(function (data) {
+                        // process the data here
+                        deferred.resolve(data);
+                    }).error(function (error) {
+                        // error handling
+                        deferred.reject();
+                    });
+                }, 2000);
+                deferred.promise.then(function(data){
+                    $scope.customers = data;
+                });
+            });
+        </script>
+    </body>
+</html>

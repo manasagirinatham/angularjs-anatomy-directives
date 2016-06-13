@@ -1,0 +1,8 @@
+<div>
+    <h2>Demo App View 2</h2>
+    <ul>
+        <li data-ng-repeat="cust in customers | filter:nameText | orderBy:'-city'">
+            {{ cust.name }} - {{ cust.city }}
+        </li>
+    </ul>
+</div>
