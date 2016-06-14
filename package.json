@@ -5,17 +5,22 @@
   "description": "AngularJS Anatomy & Directives",
   "dependencies": {},
   "devDependencies": {
-    "http-server": "*"
+    "http-server": "*",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^1.0.2"
   },
   "scripts": {
-    "start": "node node_modules/http-server/bin/http-server"
+    "start": "node node_modules/http-server/bin/http-server",
+    "test": "karma start karma.conf.js"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:agrawalakhil/angularjs-anatomy-directives.git"
   },
   "author": "Akhil Agrawal",
-  "license": "Apache Licence Version 2.0",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "http://digikrit.com"
   },

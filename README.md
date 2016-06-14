@@ -7,3 +7,7 @@ To execute the code samples, just run the following
 ### $npm start
 
 You can open the examples on http://localhost:8080/
+
+
+To run the tests example using karma and jasmine, use
+### $npm test
