@@ -7,14 +7,22 @@
                 <li ng-repeat="cust in customers">
                     {{ cust.name }} - {{ cust.city }}
                 </li>
+                <h1>Partners-info</h1>
+                <li ng-repeat="partnr in partners">
+                    {{ partnr.name }} - {{ partnr.city }}-{{ partnr.patr }}
+                </li>
             </ul>
         </div>
         <script>
             var myApp = angular.module("myApp", []);
             myApp.controller('SimpleController', function($scope) {
                 $scope.customers = [
-                    { name: 'Anuj Malik', city: 'Bengaluru' },
-                    { name: 'Deepak Kumar', city: 'Mumbai' }];
+                    { name: 'Anuj Malik', city: 'Bengaluru' , patr: 'Akhil' },
+                    { name: 'Deepak Kumar', city: 'Mumbai' , patr: 'Akhil'  }];
+          //     <h1>Partners-info</h1>
+                $scope.partners = [
+                    { name: 'Anujum Malika', city: 'Bengaluru' , patr: 'Akhil' },
+                    { name: 'Deepika Kumari', city: 'Mumbai' , patr: 'Akhil'  }];
             });
         </script>
     </body>

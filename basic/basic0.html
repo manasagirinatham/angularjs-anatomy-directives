@@ -5,12 +5,16 @@
             var myApp = angular.module("myApp", []);
             myApp.controller('SimpleController', function($scope) {
                 $scope.modelName = "Model Name";
+                $scope.modelName1 = "Model Name1";
             });
         </script>
     </head>
     <body ng-controller="SimpleController">
         <div ng-model="modelName">
              {{modelName}}
+        </div>
+        <div ng-model="modelName1">
+            {{modelName1}}
         </div>
     </body>
 </html>

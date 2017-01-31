@@ -9,7 +9,7 @@
 
         <input type="text" data-ng-model="nameText" />
         <ul>
-            <li data-ng-repeat="cust in customers | filter:nameText | orderBy:'name'">
+            <li data-ng-repeat="cust in customers | filter:nameText | orderBy:'-name'">
                 {{ cust.name }} - {{ cust.city }}
             </li>
         </ul>

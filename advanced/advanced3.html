@@ -3,6 +3,21 @@
     <body>
         <div class="container" ng-controller="SimpleController">
             <h3>Loading Customer List</h3>
+            <script>app.controller('MyController', function($scope, preloader) {}
+            $scope.imageLocations = [
+            "advanced/two.png",
+            "advanced/one.png"
+            ];
+            preloader.preloadImages( $scope.imageLocations )
+            preloader.preloadImages( $scope.imageLocations )
+            .then(function() {
+            // Loading was successful.
+            },
+            function() {
+            // Loading failed on at least one image.
+            });
+            </script>
+
             <ul>
                 <li ng-repeat="cust in customers">
                     {{ cust.name }} - {{ cust.city }}

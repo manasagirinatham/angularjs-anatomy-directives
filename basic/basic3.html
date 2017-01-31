@@ -6,7 +6,7 @@
 
             <h3>Looping with the ng-repeat Directive</h3>
             <ul>
-                <li ng-repeat="name in names">{{ name }}</li>
+                <li ng-repeat="name in names">{{$index +1}} . {{ name }}</li>
             </ul>
         </div>
     </body>
